@@ -59,13 +59,13 @@ else:
 st.header('Cómo recibir una entrada y procesarla en Streamlit?')
 st.subheader('Recibiendo texto de entrada')
 # Recibiendo texto de entrada
-firstname = st.text_input('Ingresa tu nombre:', 'Escribe aquí...')
+firstname = st.text_input('Ingresa tu nombre:')
 if st.button('Aceptar'):
     result = firstname.title()
     st.success(result)
 st.subheader('Área de texto')
-message = st.text_area('Escribe tu mensaje:', 'Escribe aquí...')
-if st.button('Aceptar'):
+message = st.text_area('Escribe tu mensaje:')
+if st.button('Aceptar1'):
     result = message.title()
     st.success(result)
 st.subheader('Entrada de fecha')
