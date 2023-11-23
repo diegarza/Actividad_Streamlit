@@ -2,6 +2,7 @@ import datetime
 import time
 import pandas as pd
 import streamlit as st
+import numpy as np
 from PIL import Image
 
 @st.cache
@@ -101,3 +102,25 @@ st.subheader('Barra de progreso')
 my_bar = st.progress(0)
 for p in range(10):
     my_bar.progress(p + 1)
+st.subheader('Spinner')
+with st.spinner('Espera por favor...'):
+    time.sleep(5)
+    st.success('Listo!')
+st.subheader('Balloons')
+st.balloons()
+st.header('Trabajando con data science')
+df = pd.read_csv('Police_comp.csv')
+st.subheader('Mostrando data frame')
+st.dataframe(df)
+st.subheader('Mostrando tabla')
+st.table(df.head())
+st.subheader('Mostrando gráficas')
+chart_data = pd.DataFrame(
+    {
+        'col1' : np.random.randn(20),
+        'col2' : np.random.randn(20),
+        'col3' : np.random.choice(('a','b','c'), 20),
+    }
+)
+
+st.line_chart(chart_data, x='col1', y='col2', color='col3')
