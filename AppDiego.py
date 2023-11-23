@@ -95,7 +95,7 @@ with st.echo():
     df = pd.DataFrame()
 st.subheader('Desplegando JSON')
 st.text('Mostrando JSON')
-st.json({'Nombre':'John', 'Apellido':'Smith', 'Género':'Masculino'})
+st.json({'Nombre':'John', 'Apellido':'Smith', 'Genero':'Masculino'})
 st.header('Mostrar barra de progreso, spinner y balloons')
 st.subheader('Barra de progreso')
 my_bar = st.progress(0)
