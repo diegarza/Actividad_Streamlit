@@ -124,3 +124,9 @@ chart_data = pd.DataFrame(
 )
 
 st.line_chart(chart_data, x='col1', y='col2', color='col3')
+
+# Mostrar barra lateral
+st.sidebar.header('Acerca')
+st.sidebar.text('Tutorial de Streamlit')
+st.header('Trabajando con funciones')
+st.write(list(run_fun(10)))
