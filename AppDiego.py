@@ -81,3 +81,23 @@ st.text('Trabajando con imágenes, audio y video')
 st.subheader('Archivo de imagen')
 img = Image.open('LogoHorizontal.png')
 st.image(img, width=300, caption='Simple imagen')
+
+st.header('Otras opciones que permite la función write')
+# Writing text/super function
+st.subheader('Texto con write')
+st.write('Texto con write')
+st.write(range(10))
+st.header('Mostrando código puro y JSON')
+st.subheader('Código puro')
+st.code('import numpy as np')
+with st.echo():
+    # This will also be shown
+    df = pd.DataFrame()
+st.subheader('Desplegando JSON')
+st.text('Mostrando JSON')
+st.json({'Nombre':'John', 'Apellido':'Smith', 'Género':'Masculino'})
+st.header('Mostrar barra de progreso, spinner y balloons')
+st.subheader('Barra de progreso')
+my_bar = st.progress(0)
+for p in range(10):
+    my_bar.progress(p + 1)
