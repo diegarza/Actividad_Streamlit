@@ -68,3 +68,16 @@ message = st.text_area('Escribe tu mensaje:', 'Escribe aquí...')
 if st.button('Aceptar'):
     result = message.title()
     st.success(result)
+st.subheader('Entrada de fecha')
+# Entrada de fecha
+today = st.date_input('Hoy es:', datetime.datetime.now())
+st.text(f'{today}')
+st.subheader('Entrada de tiempo')
+# Time
+the_time = st.time_input('La hora es:', datetime.time())
+st.text(f'{the_time}')
+st.text('Trabajando con imágenes, audio y video')
+# Imágenes
+st.subheader('Archivo de imagen')
+img = Image.open('LogoHorizontal.png')
+st.image(img, width=300, caption='Simple imagen')
