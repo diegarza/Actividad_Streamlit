@@ -7,7 +7,7 @@ from PIL import Image
 
 @st.cache
 def run_fun(n: int) -> list:
-    return range
+    return range(n)
 
 st.title('Título: Analítica de Datos')
 
